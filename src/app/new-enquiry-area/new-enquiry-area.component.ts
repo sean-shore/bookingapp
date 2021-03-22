@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewEnquiryAreaComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
+
 
 }
