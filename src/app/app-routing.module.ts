@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'new-enquiry-area', component: NewEnquiryAreaComponent },
   { path: 'new-enquiry-property', component: NewEnquiryPropertyComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'new-enquiry-form', component: NewEnquiryFormComponent }
+  { path: 'new-enquiry-form', component: NewEnquiryFormComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
