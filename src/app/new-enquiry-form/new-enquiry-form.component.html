@@ -1,8 +1,6 @@
-<body>
-
-  <div id="newEnquiryForm">
+<div class="container" id="newEnquiryForm">
     <form class="newEnquiryForm" [formGroup]="myForm">
-      <div class="startDate">
+      <div class="date-picker-form">
         <mat-form-field>
           <input matInput [matDatepicker]="startDate" placeholder="Start Date" formControlName="startDate">
           <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
@@ -10,7 +8,7 @@
         </mat-form-field>
       </div>
 
-      <div class="endDate">
+      <div class="date-picker-form">
         <mat-form-field>
           <input matInput [matDatepicker]="endDate" placeholder="End Date" formControlName="endDate">
           <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
@@ -18,7 +16,32 @@
         </mat-form-field>
       </div>
 
-      <button (click)="myForm"></button>
+      <div class="select-label">Select one or more cities</div>
+      <select class="form-select city-select" multiple aria-label="City Select">
+        <option selected></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <div class="select-label">Select one or more areas</div>
+      <select class="form-select area-select" multiple aria-label="Area Select">
+        <option selected>Select one or more areas</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <div class="select-label">Select one or more properties</div>
+      <select class="form-select area-select" multiple aria-label="Area Select">
+        <option selected>Select one or more areas</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <div class="enquiry-search-btn">
+        <button type="submit" class="btn btn-primary button-search" (click)="myForm">Search</button>
+      </div>
     </form>
-  </div>
-</body>
+</div>

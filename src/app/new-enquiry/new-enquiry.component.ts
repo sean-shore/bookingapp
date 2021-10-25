@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class NewEnquiryComponent implements OnInit {
+  title = 'New Enquiry'
 
  constructor() {
  }
