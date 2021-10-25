@@ -18,19 +18,36 @@ li {
   list-style: none;
 }
 
-.login-input {
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: white;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 4px;
+.container-fluid {
+  width: 100%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
-.login-input-button {
-  padding: 5px 30px;
-  margin: 5px;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 4px;
+.rounded-3 {
+  border-radius: .3rem;
 }
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.pb-5 {
+  padding: 3rem;
+}
+
+.login-text {
+  text-align: center;
+}
+

@@ -25,6 +25,7 @@ import {LoginFormComponent } from './login-form/login-form.component';
 import {AuthModule } from '@auth0/auth0-angular';
 import {RouterModule} from "@angular/router";
 import {AuthService} from "./auth.service";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {AuthService} from "./auth.service";
     DashboardComponent,
     NewEnquiryFormComponent,
     LoginFormComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
