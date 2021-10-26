@@ -1,8 +1,6 @@
-<body>
-
-  <div id="newEnquiryForm">
+<div class="container" id="newEnquiryForm">
     <form class="newEnquiryForm" [formGroup]="myForm">
-      <div class="startDate">
+      <div class="date-picker-form">
         <mat-form-field>
           <input matInput [matDatepicker]="startDate" placeholder="Start Date" formControlName="startDate">
           <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
@@ -10,7 +8,7 @@
         </mat-form-field>
       </div>
 
-      <div class="endDate">
+      <div class="date-picker-form">
         <mat-form-field>
           <input matInput [matDatepicker]="endDate" placeholder="End Date" formControlName="endDate">
           <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
@@ -18,7 +16,33 @@
         </mat-form-field>
       </div>
 
-      <button (click)="myForm"></button>
+      <div class="select-label" *ngIf="router.url === '/new-enquiry-city'">Select one or more cities
+        <select class="form-select select-box" multiple aria-label="City Select">
+          <option selected></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="select-label" *ngIf="router.url === '/new-enquiry-area'">Select one or more areas
+        <select class="form-select select-box" multiple aria-label="Area Select">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="select-label" *ngIf="router.url === '/new-enquiry-property'">Select one or more properties
+        <select class="form-select select-box" multiple aria-label="Property Select">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="enquiry-search-btn">
+        <button type="submit" class="btn btn-primary button-search" (click)="myForm">Search</button>
+      </div>
     </form>
-  </div>
-</body>
+</div>

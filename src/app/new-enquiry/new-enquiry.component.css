@@ -2,4 +2,11 @@ h1 {
   text-align: center;
 }
 
-
+.container-fluid {
+  width: 100%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}

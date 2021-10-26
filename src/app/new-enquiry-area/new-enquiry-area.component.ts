@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-enquiry-area.component.css']
 })
 export class NewEnquiryAreaComponent implements OnInit {
+  title = 'New Enquiry by Area'
 
   ngOnInit(): void {
   }

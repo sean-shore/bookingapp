@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-enquiry-property.component.css']
 })
 export class NewEnquiryPropertyComponent implements OnInit {
+  title = 'New Enquiry by Property'
 
   constructor() { }
 

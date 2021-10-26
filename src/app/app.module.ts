@@ -26,6 +26,7 @@ import {AuthModule } from '@auth0/auth0-angular';
 import {RouterModule} from "@angular/router";
 import {AuthService} from "./auth.service";
 import { HeaderComponent } from './header/header.component';
+import { EnquiryResultsComponent } from './enquiry-results/enquiry-results.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { HeaderComponent } from './header/header.component';
     NewEnquiryFormComponent,
     LoginFormComponent,
     HeaderComponent,
+    EnquiryResultsComponent,
   ],
   imports: [
     BrowserModule,
