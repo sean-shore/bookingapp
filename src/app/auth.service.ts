@@ -12,7 +12,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
   }
-
+// Adjust the auth method as currently bad practise and doesnt work
   authenticate(username: string, password: string) {
     const credentials = {
       username,
