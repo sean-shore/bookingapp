@@ -24,7 +24,7 @@ import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import {LoginFormComponent } from './login-form/login-form.component';
 import {AuthModule } from '@auth0/auth0-angular';
 import {RouterModule} from "@angular/router";
-import {AuthService} from "../api-services/auth.service";
+import {AuthService} from "./auth.service";
 import { HeaderComponent } from './header/header.component';
 import { EnquiryResultsComponent } from './enquiry-results/enquiry-results.component';
 
