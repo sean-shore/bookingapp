@@ -16,8 +16,22 @@
         </mat-form-field>
       </div>
 
+      <div class="select-label">Property Type
+        <select class="form-select select-box unit-type-selector" aria-label="Property Type Select">
+          <option selected>Select Property Type (Optional)</option>
+          <option value="STUDIO">Studio</option>
+          <option value="ONE_BEDROOM">One Bedroom</option>
+          <option value="TWO_BEDROOM">Two Bedroom</option>
+          <option value="THREE_BEDROOM">Three Bedroom</option>
+          <option value="FOUR_BEDROOM">Four Bedroom</option>
+          <option value="FIVE_BEDROOM">Five Bedroom</option>
+          <option value="SIX_BEDROOM">Six Bedroom</option>
+          <option value="TWIN_ROOM">Twin Room</option>
+        </select>
+      </div>
+
       <div class="select-label" *ngIf="router.url === '/new-enquiry-city'">Select one or more cities
-        <select class="form-select select-box" multiple aria-label="City Select">
+        <select class="form-select select-box unit-type-selector" multiple aria-label="City Select">
           <option selected></option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -26,7 +40,7 @@
       </div>
 
       <div class="select-label" *ngIf="router.url === '/new-enquiry-area'">Select one or more areas
-        <select class="form-select select-box" multiple aria-label="Area Select">
+        <select class="form-select select-box unit-type-selector" multiple aria-label="Area Select">
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
@@ -34,7 +48,7 @@
       </div>
 
       <div class="select-label" *ngIf="router.url === '/new-enquiry-property'">Select one or more properties
-        <select class="form-select select-box" multiple aria-label="Property Select">
+        <select class="form-select select-box unit-type-selector" multiple aria-label="Property Select">
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
