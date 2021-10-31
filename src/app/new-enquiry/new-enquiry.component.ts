@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-new-enquiry',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class NewEnquiryComponent implements OnInit {
-  title = 'New Enquiry'
+  titleNewEnquiry = 'New Enquiry';
+  titleNewEnquiryArea = 'New Enquiry by Area';
+  titleNewEnquiryCity = 'New Enquiry by City';
+  titleNewEnquiryProperty = 'New Enquiry by Property'
 
- constructor() {
+ constructor(public router: Router) {
  }
 
   ngOnInit(): void {
