@@ -1,13 +1,65 @@
-<div class="p-5 mb-4 bg-light rounded-3">
-  <div class="container-fluid py-5">
-    <h1 class="display-4 fw-bold">
-      {{title}}
+<div
+  class="p-5 mb-4 bg-light rounded-3"
+>
+  <div
+    class="container-fluid py-5"
+    *ngIf="router.url === '/new-enquiry'"
+  >
+    <h1
+      class="display-4 fw-bold"
+    >
+      {{titleNewEnquiry}}
     </h1>
-    <p class="col-md-12 fs-4">
+    <p
+      class="col-md-12 fs-4"
+    >
       Search everywhere for availability
     </p>
-<!--    <p class="col-md-12 fs-7">-->
-<!--    </p>-->
+  </div>
+  <div
+    class="container-fluid py-5"
+    *ngIf="router.url === '/new-enquiry-area'"
+  >
+    <h1
+      class="display-4 fw-bold"
+    >
+      {{titleNewEnquiryArea}}
+    </h1>
+    <p
+      class="col-md-12 fs-4"
+    >
+      Search in a specific area for availability
+    </p>
+  </div>
+  <div
+    class="container-fluid py-5"
+    *ngIf="router.url === '/new-enquiry-city'"
+  >
+    <h1
+      class="display-4 fw-bold"
+    >
+      {{titleNewEnquiryCity}}
+    </h1>
+    <p
+      class="col-md-12 fs-4"
+    >
+      Search in a specific city for availability
+    </p>
+  </div>
+  <div
+    class="container-fluid py-5"
+    *ngIf="router.url === '/new-enquiry-property'"
+  >
+    <h1
+      class="display-4 fw-bold"
+    >
+      {{titleNewEnquiryProperty}}
+    </h1>
+    <p
+      class="col-md-12 fs-4"
+    >
+      Search in a specific property for availability
+    </p>
   </div>
 </div>
 
