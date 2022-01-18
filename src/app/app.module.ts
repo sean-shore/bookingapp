@@ -19,7 +19,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatChipsModule} from '@angular/material/chips';
 import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import {LoginFormComponent } from './dashboard/login-form/login-form.component';
-import {AuthGuard, AuthModule} from '@auth0/auth0-angular';
+import {AuthModule} from '@auth0/auth0-angular';
 import {RouterModule} from '@angular/router';
 import {AuthService} from './shared/auth.service';
 import { HeaderComponent } from './header/header.component';
