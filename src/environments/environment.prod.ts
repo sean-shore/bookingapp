@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3000'
+  apiUrl: 'https://api.rerumapp.uk/api/v1',
+  authEndpoint: '/auth',
 };
