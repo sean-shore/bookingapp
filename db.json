@@ -13,7 +13,8 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
+  "auth": {
+    "username": "test-api",
+    "password": ">]8,fSGbU@<mC}BBlXns"
   }
 }

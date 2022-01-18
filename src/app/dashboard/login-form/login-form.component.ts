@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, FormsModule} from "@angular/forms";
-import {Router} from "@angular/router";
-import {AuthService} from "../../auth.service";
+import {AuthService} from '../../shared/auth.service';
 
 
 @Component({
@@ -13,12 +11,14 @@ export class LoginFormComponent implements OnInit {
   username: string;
   password: string;
 
+
   constructor(
-    private authService: AuthService) {
+    public authService: AuthService) {
   }
 
+  // tslint:disable-next-line:typedef
   login() {
-    this.authService.authenticate(this.username, this.password)
+    this.authService.authenticate(this.username, this.password);
   }
 
   ngOnInit(): void {

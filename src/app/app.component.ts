@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthService} from './shared/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,13 @@ import { Component } from '@angular/core';
 
 })
 export class AppComponent {
+  isAuthenticated: boolean;
 
-  constructor() {
+  constructor(public authService: AuthService) {
   }
 
+  // tslint:disable-next-line:typedef
+  isLoggedIn() {
+    this.isAuthenticated = this.authService.isLoggedIn();
+  }
 }
