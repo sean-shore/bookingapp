@@ -5,8 +5,8 @@
         <li class="nav-item">
           <a class="nav-link header-text" routerLink="/dashboard"><i class="bi bi-house"></i> Dashboard</a>
         </li>
-        <li class="nav-item dropdown header-text" *ngIf="!authService.isLoggedIn()">
-          <a class="nav-link dropdown-toggle header-text" href="#" id="navbarDropdownMenuLink" role="button"
+        <li class="nav-item dropdown header-text">
+          <a class="nav-link dropdown-toggle header-text" *ngIf="authService.isLoggedin" href="#" id="navbarDropdownMenuLink" role="button"
              data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-currency-pound"></i> Sales
           </a>
@@ -18,7 +18,7 @@
           </div>
         </li>
         <li>
-          <a class="nav-link header-text" *ngIf="!authService.isLoggedIn()" (click)="Logout()"><i class="bi bi-box-arrow-right"></i> Logout</a>
+          <a class="nav-link header-text" *ngIf="authService.isLoggedin" (click)="Logout()"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </li>
       </ul>
     </div>
