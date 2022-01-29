@@ -24,6 +24,7 @@ import {RouterModule} from '@angular/router';
 import {AuthService} from './shared/auth.service';
 import { HeaderComponent } from './header/header.component';
 import { EnquiryResultsComponent } from './new-enquiry/enquiry-results/enquiry-results.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { EnquiryResultsComponent } from './new-enquiry/enquiry-results/enquiry-r
   providers: [
     AuthService,
     MatDatepickerModule,
-    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}],
-  bootstrap: [AppComponent]
+    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

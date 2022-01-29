@@ -13,8 +13,7 @@
   </div>
 </div>
 
-<div class="container bg-light">
-  <p class="login-text" *ngIf="authService.isLoggedIn()">Please Login</p>
+<div class="container bg-light" *ngIf="!authService.isLoggedIn()">
   <app-login-form></app-login-form>
 </div>
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,22 +11,24 @@ export class AvailabilitiesService {
   AVAILABILITIES_PROPERTY = 'availabilities/property';
   AVAILABILITIES_CITY = 'availabilities/city';
   AVAILABILITIES_AREA = 'availabilities/area';
-  GROUPING = 'UNIT_TYPE'
+  GROUPING = 'UNIT_TYPE';
 
   constructor(private http: HttpClient) { }
 
-  availabilities(dateFrom: string, dateTo: string, propertyType: string) {
+  // tslint:disable-next-line:typedef
+  availabilities(dateFrom: string, dateTo: string, propertyType: string, grouping: string) {
     const availability = {
       dateFrom,
       dateTo,
-      propertyType
+      propertyType,
+      grouping
     };
     const headers = new HttpHeaders();
-    headers.set('Content-Type','application/json');
+    headers.set('Content-Type', 'application/json');
     this.http.post(this.BASE_URL + this.SLASH + this.AVAILABILITIES_ENDPOINT + this.SLASH, availability,
-      {headers: headers}).subscribe((data) => {
+      {headers}).subscribe((data) => {
         console.log(data);
-    })
+    });
   }
 
 }

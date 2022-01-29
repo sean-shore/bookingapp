@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../shared/auth.service';
 
-
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -10,7 +9,6 @@ import {AuthService} from '../../shared/auth.service';
 export class LoginFormComponent implements OnInit {
   username: string;
   password: string;
-
 
   constructor(
     public authService: AuthService) {

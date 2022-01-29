@@ -1,6 +1,6 @@
 <div id="cover-caption">
   <div class="container">
-    <div class="row text-white">
+    <div class="row text-white" *ngIf="!authService.isLoggedin; else loggedIn">
       <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
           <form action="" class="loginForm" (ngSubmit)="login()">
             <div class="form-group">
@@ -15,16 +15,16 @@
     </div>
   </div>
 </div>
-<!--<ng-template #loggedOut>-->
-<!--  <div id="cover-caption-else" class="alert alert-success">-->
-<!--    <div class="container">-->
-<!--      <div class="row text-black">-->
-<!--        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 ">-->
-<!--          <p>Logged In Successfully</p>-->
-<!--          <p>Please use the menu above for all your needs</p>-->
-<!--          <i class="bi bi-check-circle-fill"></i>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</ng-template>-->
+<ng-template #loggedIn>
+  <div id="cover-caption-else" class="alert alert-success">
+    <div class="container">
+      <div class="row text-black">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 ">
+          <p>Logged In Successfully</p>
+          <p>Please use the menu above for all your needs</p>
+          <i class="bi bi-check-circle-fill"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
