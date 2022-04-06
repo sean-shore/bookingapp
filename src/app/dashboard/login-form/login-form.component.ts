@@ -14,6 +14,7 @@ export class LoginFormComponent implements OnInit {
     public authService: AuthService) {
   }
 
+  // tslint:disable-next-line:typedef
   login() {
     this.authService.authenticate(this.username, this.password);
   }
