@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup } from "@angular/forms";
 import {Router} from "@angular/router";
+import {AvailabilitiesService} from "../../shared/availabilities.service";
 
 @Component({
   selector: 'app-new-enquiry-form',
@@ -8,19 +8,33 @@ import {Router} from "@angular/router";
   styleUrls: ['./new-enquiry-form.component.css'],
 })
 export class NewEnquiryFormComponent implements OnInit {
-  myForm: FormGroup;
+  startDate: string;
+  endDate: string;
+  propertyType: string;
+  city: string;
+  area: string;
+  property: string;
+  grouping = "UNIT_TYPE"
+
+  setDate(date, e) {
+    date === "start" ? (this.startDate = e) : (this.endDate = e);
+    this.printDate();
+  }
+  printDate() {
+    console.log(this.startDate);
+    console.log(this.endDate);
+  }
 
   constructor(
-    private fb: FormBuilder,
     public router: Router,
+    public availabilitiesService: AvailabilitiesService,
   ) { }
 
-  ngOnInit(): void {
-    this.myForm = this.fb.group({
-      startDate: '',
-      endDate: ''
-      }
-    )
+  ngOnInit(): void {}
+
+
+  getAvailability() {
+    this.availabilitiesService.availabilities(this.startDate, this.endDate, this.grouping)
   }
 
 }
