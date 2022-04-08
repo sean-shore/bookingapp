@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import {RouterModule} from '@angular/router';
 import {AuthService} from './shared/auth.service';
 import { HeaderComponent } from './header/header.component';
 import { EnquiryResultsComponent } from './new-enquiry/enquiry-results/enquiry-results.component';
+import {AuthInterceptor} from "./shared/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { EnquiryResultsComponent } from './new-enquiry/enquiry-results/enquiry-r
     AuthService,
     MatDatepickerModule,
     {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
